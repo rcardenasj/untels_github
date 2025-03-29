@@ -1,0 +1,20 @@
+name: Accion Hola Mundo
+
+on:
+  push:
+    branches: 
+      - main
+  pull_request:
+    branches: 
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out the repository
+      uses: actions/checkout@v2
+
+    - name: Mostrar Hola Mundo
+      run: echo "¡Hola Mundo!"
